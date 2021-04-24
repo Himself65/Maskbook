@@ -1,6 +1,7 @@
 import { first } from 'lodash-es'
 import * as MetaMask from './providers/MetaMask'
 import * as WalletConnect from './providers/WalletConnect'
+import * as CustomNetwork from './providers/CustomNetwork'
 import { getWallets } from '../../../plugins/Wallet/services'
 import { ProviderType } from '../../../web3/types'
 
@@ -17,17 +18,21 @@ export async function connectWalletConnect() {
     const connector = await WalletConnect.createConnectorIfNeeded()
     if (connector.connected) return connector.accounts[0]
     const accounts = await WalletConnect.requestAccounts()
-    return accounts[0]
+    return first(accounts)
 }
 //#endregion
 
 export async function connectMetaMask() {
     const accounts = await MetaMask.requestAccounts()
-    return accounts[0]
+    return first(accounts)
 }
 
 export async function connectMaskbook() {
     const wallets = await getWallets(ProviderType.Maskbook)
-    // return the first managed wallet
     return first(wallets)
+}
+
+export async function connectCustomNetwork() {
+    const accounts = await CustomNetwork.requestAccounts()
+    return first(accounts)
 }
