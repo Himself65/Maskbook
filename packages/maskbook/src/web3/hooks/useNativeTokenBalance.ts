@@ -1,7 +1,8 @@
 import { useAccount } from './useAccount'
 import { useAsyncRetry } from 'react-use'
-import { useBlockNumber, useChainId } from './useBlockNumber'
+import { useBlockNumber } from './useBlockNumber'
 import Services from '../../extension/service'
+import { useChainId } from './useChainId'
 
 /**
  * Fetch native token balance from chain

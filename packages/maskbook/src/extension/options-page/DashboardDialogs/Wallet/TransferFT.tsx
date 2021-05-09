@@ -9,7 +9,7 @@ import { TransferTab } from './TransferTab'
 import type { WalletProps } from './types'
 
 export function DashboardWalletTransferDialogFT(
-    props: WrappedDialogProps<WalletProps & { token: ERC20TokenDetailed | NativeTokenDetailed }>,
+    props: WrappedDialogProps<WalletProps & { token: NativeTokenDetailed | ERC20TokenDetailed }>,
 ) {
     const { wallet, token } = props.ComponentProps!
     const { t } = useI18N()

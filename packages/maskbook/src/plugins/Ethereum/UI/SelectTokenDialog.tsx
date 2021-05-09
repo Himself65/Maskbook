@@ -40,8 +40,8 @@ export function SelectTokenDialog(props: SelectTokenDialogProps) {
     const [id, setId] = useState('')
     const [keyword, setKeyword] = useState('')
 
-    //#region ether token
-    const { value: etherTokenDetailed } = useNativeTokenDetailed()
+    //#region native token
+    const { value: nativeTokenDetailed } = useNativeTokenDetailed()
     //#endregion
 
     //#region remote controlled dialog
@@ -103,9 +103,9 @@ export function SelectTokenDialog(props: SelectTokenDialogProps) {
                         ...FixedTokenListProps,
                         tokens: [
                             ...(!disableEther &&
-                            etherTokenDetailed &&
+                            nativeTokenDetailed &&
                             (!keyword || 'ether'.includes(keyword.toLowerCase()))
-                                ? [etherTokenDetailed]
+                                ? [nativeTokenDetailed]
                                 : []),
                             ...(FixedTokenListProps?.tokens ?? []),
                         ],
