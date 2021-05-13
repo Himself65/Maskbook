@@ -300,6 +300,7 @@
     "plugin_wallet_transaction_wait_for_confirmation": "",
     "plugin_wallet_transaction_submitted": "",
     "plugin_wallet_transaction_confirmed": "",
+    "plugin_wallet_transaction_reverted": "",
     "plugin_wallet_transaction_rejected": "",
     "plugin_wallet_transaction_server_error": "",
     "plugin_wallet_view_on_etherscan": "",
@@ -441,6 +442,7 @@
     "plugin_ito_dialog_swap_panel_title": "",
     "plugin_ito_dialog_swap_exceed_wallet_limit": "",
     "plugin_ito_swap_ration_label": "",
+    "plugin_ito_swap_unlucky_fail": "",
     "plugin_ito_swap_only_once_remind": "",
     "plugin_ito_swap_title": "",
     "plugin_ito_swap_end_date": "",
@@ -600,5 +602,12 @@
     "wallet_transfer_error_amount_absence": "",
     "wallet_transfer_error_address_absence": "",
     "wallet_transfer_error_invalid_address": "",
-    "wallet_transfer_error_insufficent_balance": ""
+    "wallet_transfer_error_insufficent_balance": "",
+    "wallet_import_json": "",
+    "wallet_import_json_keystore": "",
+    "wallet_import_json_keystore_content": "",
+    "wallet_import_json_keystore_password": "",
+    "wallet_import_json_keystore_password_helper": "",
+    "wallet_import_json_wallet_name": "",
+    "wallet_import_json_wallet_name_helper": ""
 }
