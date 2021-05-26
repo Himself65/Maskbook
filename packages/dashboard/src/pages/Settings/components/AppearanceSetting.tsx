@@ -4,8 +4,9 @@ import { useAppearance } from '../../Personas/api'
 import { Appearance } from '@dimensiondev/maskbook-theme'
 
 import SettingSelect from './SettingSelect'
+import { memo } from 'react'
 
-export default function AppearanceSetting() {
+const AppearanceSetting = memo(() => {
     const mode = useAppearance()
     const handleChange = (event: any) => {
         Services.Settings.setTheme(event.target.value)
@@ -18,4 +19,6 @@ export default function AppearanceSetting() {
             <MenuItem value={Appearance.dark}>Dark</MenuItem>
         </SettingSelect>
     )
-}
+})
+
+export default AppearanceSetting

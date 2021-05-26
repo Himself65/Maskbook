@@ -1,5 +1,8 @@
 import SettingButton from './SettingButton'
+import { memo } from 'react'
 
-export default function RestoreSetting() {
+const RestoreSetting = memo(() => {
     return <SettingButton>Recovery</SettingButton>
-}
+})
+
+export default RestoreSetting

@@ -3,8 +3,9 @@ import { useLanguage } from '../api'
 import { Services } from '../../../API'
 import SettingSelect from './SettingSelect'
 import { Language } from '@dimensiondev/maskbook-theme'
+import { memo } from 'react'
 
-export default function LanguageSetting() {
+const LanguageSetting = memo(() => {
     const lang = useLanguage()
     const handleChange = (event: any) => {
         Services.Settings.setLanguage(event.target.value)
@@ -18,4 +19,6 @@ export default function LanguageSetting() {
             <MenuItem value={Language.ja}>日本語</MenuItem>
         </SettingSelect>
     )
-}
+})
+
+export default LanguageSetting

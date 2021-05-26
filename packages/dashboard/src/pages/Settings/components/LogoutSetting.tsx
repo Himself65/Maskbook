@@ -1,5 +1,8 @@
 import SettingButton from './SettingButton'
+import { memo } from 'react'
 
-export default function LogoutSetting() {
+const LogoutSetting = memo(() => {
     return <SettingButton>Log out</SettingButton>
-}
+})
+
+export default LogoutSetting

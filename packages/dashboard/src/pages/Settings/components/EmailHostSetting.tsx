@@ -1,5 +1,8 @@
 import SettingButton from './SettingButton'
+import { memo } from 'react'
 
-export default function EmailHostSetting() {
+const EmailHostSetting = memo(() => {
     return <SettingButton>Authorize</SettingButton>
-}
+})
+
+export default EmailHostSetting

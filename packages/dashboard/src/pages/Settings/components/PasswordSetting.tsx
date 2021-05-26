@@ -1,5 +1,8 @@
 import SettingButton from './SettingButton'
+import { memo } from 'react'
 
-export default function PasswordSetting() {
+const PasswordSetting = memo(() => {
     return <SettingButton>Change</SettingButton>
-}
+})
+
+export default PasswordSetting

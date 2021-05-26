@@ -1,5 +1,8 @@
 import SettingButton from './SettingButton'
+import { memo } from 'react'
 
-export default function EmailSetting() {
+const EmailSetting = memo(() => {
     return <SettingButton>Edit</SettingButton>
-}
+})
+
+export default EmailSetting

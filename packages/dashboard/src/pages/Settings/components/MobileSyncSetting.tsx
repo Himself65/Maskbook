@@ -1,5 +1,8 @@
 import SettingButton from './SettingButton'
+import { memo } from 'react'
 
-export default function MobileSyncSetting() {
+const MobileSyncSetting = memo(() => {
     return <SettingButton>Sync</SettingButton>
-}
+})
+
+export default MobileSyncSetting
